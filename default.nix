@@ -8,4 +8,8 @@ rec {
   hmModules = import ./hm-modules;
   ndModules = import ./nd-modules;
 
+  hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
+
+  sysfo = pkgs.callPackage ./pkgs/sysfo { };
+
 }
