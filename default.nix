@@ -1,6 +1,6 @@
 { system ? builtins.currentSystem, pkgs ? import <nixpkgs> { inherit system; } }:
 
-rec {
+{
 
   lib = import ./lib { inherit pkgs; };
   modules = import ./modules;
@@ -8,11 +8,14 @@ rec {
   hmModules = import ./hm-modules;
   ndModules = import ./nd-modules;
 
-  hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
+  dmenu = pkgs.callPackage ./pkgs/dmenu { };
 
   firefox-addons =
     pkgs.recurseIntoAttrs (pkgs.callPackage ./pkgs/firefox-addons { });
 
-  sysfo = pkgs.callPackage ./pkgs/sysfo { };
+  hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
 
+  st = pkgs.callPackage ./pkgs/st { };
+
+  sysfo = pkgs.callPackage ./pkgs/sysfo { };
 }
