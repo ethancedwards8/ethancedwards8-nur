@@ -10,6 +10,9 @@ rec {
 
   hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
 
+  firefox-addons =
+    pkgs.recurseIntoAttrs (pkgs.callPackage ./pkgs/firefox-addons { });
+
   sysfo = pkgs.callPackage ./pkgs/sysfo { };
 
 }
