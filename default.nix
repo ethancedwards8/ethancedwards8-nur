@@ -13,6 +13,9 @@
   firefox-addons =
     pkgs.recurseIntoAttrs (pkgs.callPackage ./pkgs/firefox-addons { });
 
+  firefox-addons-generator =
+    pkgs.haskellPackages.callPackage ./pkgs/firefox-addons-generator { inherit inputs; };
+
   hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
 
   st = pkgs.callPackage ./pkgs/st { inherit inputs; };

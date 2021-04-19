@@ -16,6 +16,22 @@
         "type": "gitlab"
       }
     },
+    "firefox-addons-generator": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1612209363,
+        "narHash": "sha256-eENWGMNoKMAKm82FFm5MY1dTW1RQ+Tl2Hur2vUkOrTg=",
+        "owner": "rycee",
+        "repo": "nixpkgs-firefox-addons",
+        "rev": "44f73a5c5fb1d753fe11eed44e729f7ed707cb65",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "rycee",
+        "repo": "nixpkgs-firefox-addons",
+        "type": "gitlab"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1618712011,
@@ -35,6 +51,7 @@
     "root": {
       "inputs": {
         "dmenu": "dmenu",
+        "firefox-addons-generator": "firefox-addons-generator",
         "nixpkgs": "nixpkgs",
         "st": "st",
         "sysfo": "sysfo"

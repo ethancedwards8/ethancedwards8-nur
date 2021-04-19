@@ -13,6 +13,10 @@
       url = "gitlab:ethancedwards/dmenu-config";
       flake = false;
     };
+    firefox-addons-generator = {
+      url = "gitlab:rycee/nixpkgs-firefox-addons";
+      flake = false;
+    };
     st = {
       url = "gitlab:ethancedwards/st-config";
       flake = false;
