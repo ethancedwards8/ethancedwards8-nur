@@ -1,12 +1,28 @@
 {
   "nodes": {
+    "dmenu": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1600225289,
+        "narHash": "sha256-Kqhf7+kl+izCyrcwW6LaNrbYFh23j1nmBN+7/ebOlA0=",
+        "owner": "ethancedwards",
+        "repo": "dmenu-config",
+        "rev": "9cd6fe49998b48aa1b97e8b66d8895624b0ac897",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "ethancedwards",
+        "repo": "dmenu-config",
+        "type": "gitlab"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1618447066,
-        "narHash": "sha256-2f9ydxgdW2igSIe1vmV8buTEpAVQPVhV+OxvlFRTA+Y=",
+        "lastModified": 1618712011,
+        "narHash": "sha256-MaMiw17615T+7EVJ4BCl2UfzTER5TRBIhuszss3LA34=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "dcdf30a78a523296b5f9d44fb67afac485b64737",
+        "rev": "b2f2d04f01b3de3abad0dd9bc48ad7a3ee32bbc6",
         "type": "github"
       },
       "original": {
@@ -18,7 +34,42 @@
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "dmenu": "dmenu",
+        "nixpkgs": "nixpkgs",
+        "st": "st",
+        "sysfo": "sysfo"
+      }
+    },
+    "st": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1618617232,
+        "narHash": "sha256-aAkLLrZkwKsQWRTxJRbjrdLbeq01eMrvQhldF5kQBTk=",
+        "owner": "ethancedwards",
+        "repo": "st-config",
+        "rev": "8dfefc7d84c4aa1785cd583fd027b90fd9df9771",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "ethancedwards",
+        "repo": "st-config",
+        "type": "gitlab"
+      }
+    },
+    "sysfo": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1618797577,
+        "narHash": "sha256-cy0ahGRlaSAGeGKT7+saq9toVqQn4ZEuy/tSCfZr6xw=",
+        "owner": "ethancedwards8",
+        "repo": "sysfo",
+        "rev": "59e69c8f2a96cc8c62a1cc5f833bde4f66189de8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ethancedwards8",
+        "repo": "sysfo",
+        "type": "github"
       }
     }
   },
