@@ -1,15 +1,15 @@
-{ lib, stdenv, libX11, libXinerama, libXft, zlib, patches ? null, fetchFromGitLab, inputs, ... }:
+{ lib, stdenv, libX11, libXinerama, libXft, zlib, patches ? null, fetchFromGitLab, ... }@inputs:
 
 stdenv.mkDerivation rec {
   name = "dmenu-5.0";
 
-  src = inputs.dmenu;
-  # src = fetchFromGitLab {
-  #   owner = "ethancedwards";
-  #   repo = "dmenu-config";
-  #   rev = "9cd6fe49998b48aa1b97e8b66d8895624b0ac897";
-  #   sha256 = "Kqhf7+kl+izCyrcwW6LaNrbYFh23j1nmBN+7/ebOlA0=";
-  # };
+  # src = inputs.dmenu;
+  src = fetchFromGitLab {
+    owner = "ethancedwards";
+    repo = "dmenu-config";
+    rev = "9cd6fe49998b48aa1b97e8b66d8895624b0ac897";
+    sha256 = "Kqhf7+kl+izCyrcwW6LaNrbYFh23j1nmBN+7/ebOlA0=";
+  };
 
   buildInputs = [ libX11 libXinerama zlib libXft ];
 

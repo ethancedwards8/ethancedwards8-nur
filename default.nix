@@ -1,4 +1,4 @@
-{ system ? builtins.currentSystem, pkgs ? import <nixpkgs> { inherit system; }, inputs, ... }:
+{ system ? builtins.currentSystem, pkgs ? import <nixpkgs> { inherit system; }, ... }@inputs:
 
 {
 
@@ -8,17 +8,17 @@
   hmModules = import ./hm-modules;
   ndModules = import ./nd-modules;
 
-  dmenu = pkgs.callPackage ./pkgs/dmenu { inherit inputs; };
+  dmenu = pkgs.callPackage ./pkgs/dmenu { };
 
   firefox-addons =
     pkgs.recurseIntoAttrs (pkgs.callPackage ./pkgs/firefox-addons { });
 
   firefox-addons-generator =
-    pkgs.haskellPackages.callPackage ./pkgs/firefox-addons-generator { inherit inputs; };
+    pkgs.haskellPackages.callPackage ./pkgs/firefox-addons-generator { };
 
   hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
 
-  st = pkgs.callPackage ./pkgs/st { inherit inputs; };
+  st = pkgs.callPackage ./pkgs/st { };
 
-  sysfo = pkgs.callPackage ./pkgs/sysfo { inherit inputs; };
+  sysfo = pkgs.callPackage ./pkgs/sysfo { };
 }

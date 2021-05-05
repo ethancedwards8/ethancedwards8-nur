@@ -1,5 +1,5 @@
 { lib, stdenv, pkg-config, writeText, libX11, ncurses
-, libXft, conf ? null, patches ? [], extraLibs ? [], fetchFromGitLab, inputs, ... }:
+, libXft, conf ? null, patches ? [], extraLibs ? [], fetchFromGitLab, ... }@inputs:
 
 with lib;
 
@@ -7,13 +7,13 @@ stdenv.mkDerivation rec {
   pname = "st";
   version = "0.8.4";
 
-  src = inputs.st;
-  # src = fetchFromGitLab {
-  #   owner = "ethancedwards";
-  #   repo = "st-config";
-  #   rev = "8dfefc7d84c4aa1785cd583fd027b90fd9df9771";
-  #   sha256 = "aAkLLrZkwKsQWRTxJRbjrdLbeq01eMrvQhldF5kQBTk=";
-  # };
+  # src = inputs.st;
+  src = fetchFromGitLab {
+    owner = "ethancedwards";
+    repo = "st-config";
+    rev = "8dfefc7d84c4aa1785cd583fd027b90fd9df9771";
+    sha256 = "aAkLLrZkwKsQWRTxJRbjrdLbeq01eMrvQhldF5kQBTk=";
+  };
 
   inherit patches;
 

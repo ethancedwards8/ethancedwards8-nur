@@ -1,16 +1,16 @@
 { aeson, base-noprelude, directory, fetchFromGitLab, hnix, lib, microlens-aeson
-, microlens-platform, mkDerivation, relude, text, wreq, inputs, ... }:
+, microlens-platform, mkDerivation, relude, text, wreq, ... }@inputs:
 
 mkDerivation rec {
   pname = "nixpkgs-firefox-addons";
   version = "0.8.0";
-  src = inputs.firefox-addons-generator;
-  # src = fetchFromGitLab {
-  #   owner = "rycee";
-  #   repo = "nixpkgs-firefox-addons";
-  #   rev = "v${version}";
-  #   sha256 = "0f5d1r4vvxpa3rv3kyahaidm6mv39ip1d1fdkc5c0a38qcc5chvq";
-  # };
+  # src = inputs.firefox-addons-generator;
+  src = fetchFromGitLab {
+    owner = "rycee";
+    repo = "nixpkgs-firefox-addons";
+    rev = "v${version}";
+    sha256 = "0f5d1r4vvxpa3rv3kyahaidm6mv39ip1d1fdkc5c0a38qcc5chvq";
+  };
   isLibrary = false;
   isExecutable = true;
   enableSeparateDataOutput = true;

@@ -2,10 +2,10 @@
   {
     "enhancer-for-youtube" = buildFirefoxXpiAddon {
       pname = "enhancer-for-youtube";
-      version = "2.0.104.6";
+      version = "2.0.104.8";
       addonId = "enhancerforyoutube@maximerf.addons.mozilla.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/3760058/enhancer_for_youtubetm-2.0.104.6-fx.xpi";
-      sha256 = "51b40602271173a3dd09b3d4ae8bbc2b307d4ca405fe336c5d9a29b99bbd0305";
+      url = "https://addons.mozilla.org/firefox/downloads/file/3761885/enhancer_for_youtubetm-2.0.104.8-fx.xpi";
+      sha256 = "a5b48c78ad5474cd9e0874648f6803815483c00b66103adff6497676e3806087";
       meta = with lib;
       {
         homepage = "https://www.mrfdev.com/enhancer-for-youtube";
