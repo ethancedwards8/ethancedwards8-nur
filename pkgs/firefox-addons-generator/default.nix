@@ -2,7 +2,7 @@
 , microlens-platform, mkDerivation, relude, text, wreq, ... }@inputs:
 
 mkDerivation rec {
-  __contentAddressed = true;
+  # __contentAddressed = true;
   pname = "nixpkgs-firefox-addons";
   version = "0.8.0";
   # src = inputs.firefox-addons-generator;
