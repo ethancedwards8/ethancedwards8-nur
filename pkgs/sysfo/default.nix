@@ -10,10 +10,10 @@ stdenv.mkDerivation rec {
     owner = "ethancedwards8";
     repo = "sysfo";
     rev = "v${version}";
-    sha256 = "0000000000000000000000000000000000000000000000000000";
+    sha256 = "HolKGbHC+6UWYKJIPO2ZFIUtLgUN3VZbcvMnyqTa1O8=";
   };
   buildPhase = ''
-    make CC=$(cc)
+    make CC=cc
   '';
 
   checkPhase = ''
