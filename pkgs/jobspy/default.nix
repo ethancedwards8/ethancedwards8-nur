@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Bunsly";
     repo = "JobSpy";
-    tag = version;
+    rev = version;
     hash = "sha256-Wb8opQ3fsCsRuQQ8lwb9luhZbIW/x3OqLYI0PqNsMoc=";
   };
 
