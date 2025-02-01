@@ -20,5 +20,7 @@
 
   st = pkgs.callPackage ./pkgs/st { };
 
+  jobspy = pkgs.python3.pkgs.callPackage ./pkgs/jobspy { };
+
   sysfo = pkgs.callPackage ./pkgs/sysfo { };
 }
